@@ -3,8 +3,8 @@ import { Text, View, Image } from 'react-native';
 
 const NavigationBar = (props) => {
     return (
-        <View style={{ backgroundColor: "#DFE6ED", height: 60, flexDirection: "row" }}>
-
+        //TODO: alter accordingly 
+        <View style={{ backgroundColor: "#DFE6ED", height: 60, flexDirection: "row", justifyContent:"flex-end" }}>
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Image style={{ width: 40, height: 40 }} source={require("../../assets/home.png")} />
                 <Text>Home</Text>
@@ -17,7 +17,6 @@ const NavigationBar = (props) => {
                 <Image style={{ width: 40, height: 40 }} source={require("../../assets/user.png")} />
                 <Text>Profile</Text>
             </View>
-
         </View>
     );
 };

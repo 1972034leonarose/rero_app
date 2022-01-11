@@ -29,13 +29,16 @@ export default class EditProfile extends Component {
                         translucent={true}
                     />
                 </View>
+
+            {/* ------ header ------- */}
             <View style={{marginHorizontal: 37, paddingTop: 37, flexDirection: 'row'}}>
             <BackButton onPress={this.handleBackButtonClick} />
                 <View>
                 <Text style={{fontSize: 24, fontWeight: "bold", color: "#000" }}>Edit Profile</Text>
                 </View>
-
             </View>
+            {/* ------ end header ------- */}
+
             <View style={{padding: 27, alignItems: 'center'}}>
                 <ProfileCard>
                     <View style={{flexDirection: 'row', paddingTop: 10}}>
