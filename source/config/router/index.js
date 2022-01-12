@@ -8,6 +8,7 @@ import Signup from '../../pages/Signup';
 import Profile from '../../pages/Profile/index';
 import EditProfile from '../../pages/Profile/edit-profile';
 import Reserve from '../../pages/Reserve/index';
+import ViewRestaurant from '../../pages/Reserve/viewRestaurant';
 import Menu from '../../pages/Menu/index';
 
 
@@ -26,6 +27,8 @@ function Router() {
                 <Stack.Screen name="EditProfile" component={EditProfile} options={{ headerShown: false }} />
                 <Stack.Screen name="Reserve" component={Reserve} options={{ headerShown: false }} />
                 <Stack.Screen name="Menu" component={Menu} options={{ headerShown: false }} />
+                <Stack.Screen name="ViewRestaurant" component={ViewRestaurant} options={{ headerShown: false }} />
+
 
             </Stack.Navigator>
         </NavigationContainer>
