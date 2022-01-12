@@ -48,17 +48,17 @@ export default class Profile extends Component {
                 <View style={{width: 352, height: 150, marginVertical: 37}}>
                 <View style={{flexDirection: 'row', paddingTop: 4, justifyContent: 'space-between', marginHorizontal: 12}}>
                     <View style={{alignItems: 'center', width: 80}}>
-                    <Image source={require("../../assets/face.jpg")} style={{width:100, height: 100, borderRadius:100/2 }}></Image>
+                    <Image source={require("../../assets/waiting.png")} style={{width:100, height: 100, borderRadius:100/2 }}></Image>
                     <Text style={{textAlign: 'center', paddingTop: 5}}>Waiting for payment</Text>
                     </View>
 
                     <View style={{alignItems: 'center', width: 100}}>
-                    <Image source={require("../../assets/face.jpg")} style={{width:100, height: 100, borderRadius:100/2 }}></Image>
+                    <Image source={require("../../assets/reservation.jpg")} style={{width:100, height: 100, borderRadius:100/2 }}></Image>
                     <Text style={{textAlign: 'center', paddingTop: 5}}>Ongoing{"\n"} Reservations</Text> 
                     </View>
 
                     <View style={{alignItems: 'center', width: 80}}>
-                    <Image source={require("../../assets/face.jpg")} style={{width:100, height: 100, borderRadius:100/2 }}></Image>
+                    <Image source={require("../../assets/done.png")} style={{width:100, height: 100, borderRadius:100/2 }}></Image>
                     <Text style={{textAlign: 'center', paddingTop: 5}}>Done</Text>
                     </View>                
                     </View>
