@@ -1,29 +1,45 @@
 import React from 'react';
 import { Component } from "react/cjs/react.production.min";
-import {View, Text, Image, TouchableOpacity, TextInput, ScrollView} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Icon from 'react-native-vector-icons/Ionicons';
-import BackButton from "../../components/Atoms/BackButton";
-import MenuView from '../../containers/MenuView/index';
-import MenuMainView from '../../containers/MenuView/other';
 import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import ButtonLong from "../../components/Atoms/ButtonLong";
-import MenuCardItem from '../../components/Molecules/MenuCardItem';
+import MenuSmallView from '../../containers/MenuView/small';
+
 
 /* installed package for bottom sheet : npm install reanimated-bottom-sheet */
 
 
 
-export default class Menu extends Component{
+export default class ViewRestaurant extends Component{
 
     /*dummy content YA! */
     renderContent = () => (
-        <View style={{padding: 20, backgroundColor:'white', alignItems: 'center'}}>
-        <Image source={require("../../assets/imagedumb.png")} style={{width:280, height: 200}}></Image>
+        <View style={{padding: 20, backgroundColor:'white'}}>
+        <Text style={{fontWeight:'bold', fontSize:24, textAlign:'left', paddingTop:10}}>Cafeteria</Text>
+
+        {/*Reviews, etc.*/}
+        <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+       
+        <Text style={{paddingTop:10, fontSize:16}}>$$$$</Text>
+        <Text style={{paddingTop:10, fontSize:16}}>Indonesian</Text>
+        <View style={{flexDirection:'row'}}>
+
+        <View style={{backgroundColor:'red', alignItems:'center', marginRight:10, paddingTop:10}}><Icon name="star" size={20}></Icon>
+        </View>
+     
+        <Text style={{paddingTop:10, fontSize:16}}>9.4</Text>
+        </View>
+        
+
+        </View>
+
         <View style={{paddingVertical:20}}> 
         <View style={{flexDirection:'row', justifyContent: 'space-between', paddingBottom:5}}>
-        <Text style={{fontWeight:'bold'}}>Thai Beef Salad</Text>
+
+        
         <Text  style={{fontWeight:'bold'}}>Rp. 45,000</Text>    
         </View>      
         <Text style={{textAlign:'justify'}}>This aromatic Asian salad combines lemony-flavoured coriander leaves with cool cucumber, refreshing mint and rare beef.</Text>    
@@ -31,6 +47,7 @@ export default class Menu extends Component{
         {/*onPress={}*/}
         <View style={{ paddingBottom: 20}}>
         <TouchableOpacity style={{ backgroundColor: "#F9B153", alignItems: "center", justifyContent: "center", borderRadius: 7, height: 40, width: 195 }}>
+            <MenuSmallView></MenuSmallView>
             <Text style={{ fontSize: 16, color: "#FFFFFF" }} >Add to Order</Text>
         </TouchableOpacity>  
         </View>
@@ -48,7 +65,7 @@ export default class Menu extends Component{
     }
 
     bs = React.createRef();
-    fall = new Animated.Value(0); /*check*/
+    fall = new Animated.Value(1);
     
     render() {
         return (
@@ -56,11 +73,13 @@ export default class Menu extends Component{
 
                 <BottomSheet 
                     ref={this.bs}
-                    snapPoints={[390, 0, 0]}
+                    snapPoints={[760, 700, 600]}
                     renderContent={this.renderContent}
-                    initialSnap={1}
+                    initialSnap={0}
                     callbackNode={this.fall}
                     enabledGestureInteraction={true}
+                    enabledInnerScrolling={true}
+                    borderRadius={10}
                 />
             <View>
                 <StatusBar
@@ -71,36 +90,11 @@ export default class Menu extends Component{
                     />
                 </View>
             
-          {/* ------ header ------- */}
-          <View style={{marginHorizontal: 34, paddingTop: 37, flexDirection: 'row'}}>
-            <BackButton onPress={this.handleBackButtonClick} />
-                <View>    
-                <Text style={{fontSize: 24, fontWeight: "bold", color: "#000" }}>Menu</Text>
-                </View>
-            </View>
-            {/* ------ end header ------- */}
 
-            <View style={{ height: 80, paddingTop: 25}}>
-            <View style={{flexDirection: 'row', padding:10, backgroundColor:'white', marginHorizontal: 20, elevation:2, shadowColor:'black', borderRadius:5}}>
-                <Icon name="ios-search" size={20} style={{marginRight:10}}>
-                </Icon>
-                <TextInput underlineColorAndroid="transparent" placeholder="Search for a menu"></TextInput>
-            </View>
-            </View>
-
-            <ScrollView>
-                <MenuMainView title="Main Course"/>
-
-                {/*Testing border sheet*/}
-                <View style={{paddingLeft: 25}}>
-                <TouchableOpacity onPress={()=> this.bs.current.snapTo(0)}>
-                <MenuCardItem imgUri={require("../../assets/imagedumb.png")} menuName="Thai Beef Salad" price="Rp. 65,000"/>
-                </TouchableOpacity>
+                <View style={{width:202}}>
+                <Image source={require("../../assets/imagedumb.png")} style={{width:280, height: 200}}></Image>
                 </View>
                 
-                <View style={{paddingBottom:20}}></View>
-                <MenuView title="All Day Breakfast"/>
-            </ScrollView>
 
             </View>
         );
