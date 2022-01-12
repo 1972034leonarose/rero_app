@@ -20,7 +20,7 @@ export default class Menu extends Component{
     /*dummy content YA! */
     renderContent = () => (
         <View style={{padding: 20, backgroundColor:'white', alignItems: 'center'}}>
-        <Image source={require("../../assets/imagedumb.png")} style={{width:280, height: 200}}></Image>
+        <Image source={require("../../assets/salad.png")} style={{width:280, height: 200}}></Image>
         <View style={{paddingVertical:20}}> 
         <View style={{flexDirection:'row', justifyContent: 'space-between', paddingBottom:5}}>
         <Text style={{fontWeight:'bold'}}>Thai Beef Salad</Text>
@@ -94,7 +94,7 @@ export default class Menu extends Component{
                 {/*Testing border sheet*/}
                 <View style={{paddingLeft: 25}}>
                 <TouchableOpacity onPress={()=> this.bs.current.snapTo(0)}>
-                <MenuCardItem imgUri={require("../../assets/imagedumb.png")} menuName="Thai Beef Salad" price="Rp. 65,000"/>
+                <MenuCardItem imgUri={require("../../assets/salad.png")} menuName="Thai Beef Salad" price="Rp. 65,000"/>
                 </TouchableOpacity>
                 </View>
                 
