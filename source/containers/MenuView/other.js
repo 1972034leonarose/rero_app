@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import MenuCardItem from '../../components/Molecules/MenuCardItem';
+import MenuCardItem from '../../components/Molecules/MenuCardItem/index';
 
 const MenuMainView = (props) => {
     return (

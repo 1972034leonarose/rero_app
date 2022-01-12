@@ -1,17 +1,15 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import MenuCardItem from '../../components/Molecules/MenuCardItem/index';
+import MenuCardItem from '../../components/Molecules/MenuCardItem/other';
 
-const MenuView = (props) => {
+const MenuSmallView = (props) => {
     return (
-        <View>
+        <View style={{alignItems:'center', backgroundColor:'red'}}> 
             <View style={{marginLeft:25, marginBottom:10, marginTop:20}}>
              <Text style={{ fontSize: 20, fontWeight: "bold" }}>{props.title}</Text>
              </View>
 
-             <View style={{alignItems:'center'}}>
-            <MenuCardItem imgUri={require("../../assets/imagedumb.png")} menuName="Food" price="Rp. 65,000"/>
-            <MenuCardItem imgUri={require("../../assets/imagedumb.png")} menuName="Food" price="Rp. 65,000"/>
+             <View style={{flexDirection:'row'}}>
             <MenuCardItem imgUri={require("../../assets/imagedumb.png")} menuName="Food" price="Rp. 65,000"/>
             <MenuCardItem imgUri={require("../../assets/imagedumb.png")} menuName="Food" price="Rp. 65,000"/>
             </View>
@@ -19,4 +17,4 @@ const MenuView = (props) => {
     );
 };
 
-export default MenuView;
+export default MenuSmallView;
