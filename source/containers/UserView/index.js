@@ -14,7 +14,7 @@ const UserView = ({ username }) => {
             </View>
 
             <View style={{ marginBottom: 20 }}>
-                <Image style={{ width: 360, height: 200 }} source={require("../../assets/imagedumb.png")} />
+                <Image style={{ width: 360, height: 200, borderRadius: 10 }} source={require("../../assets/home1.png")} />
             </View>
         </View>
     );

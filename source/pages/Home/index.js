@@ -10,7 +10,6 @@ import CravingView from "../../containers/CravingView";
 import UserView from "../../containers/UserView";
 import AsyncStorageLib from "@react-native-async-storage/async-storage";
 import firestore from "@react-native-firebase/firestore";
-import test from "../test";
 
 export default class Home extends Component {
     constructor() {
@@ -75,7 +74,7 @@ export default class Home extends Component {
                             <NearMeView NearMeRestaurants={this.state.ArrayRestaurant} />
                         </View>
                     </ScrollView>
-                    <NavigationBar />
+                    <NavigationBar onPressReserve={() => this.props.navigation.navigate("Reserve")} onPressProfile={() => this.props.navigation.navigate("Profile")} />
                 </View>
             )
 

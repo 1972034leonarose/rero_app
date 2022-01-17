@@ -15,14 +15,13 @@ const CravingView = (props) => {
                     </View>
                 </View>
 
-
-                <ScrollView horizontal style={{ flexDirection: "row", paddingTop:5}} showsHorizontalScrollIndicator={false}>
+                <ScrollView horizontal style={{ flexDirection: "row" }} showsHorizontalScrollIndicator={false}>
                     {/**item */}
-                    <CravingViewItem imgUri={require("../../assets/arrow.png")} title="Japanese" />
-                    <CravingViewItem imgUri={require("../../assets/arrow.png")}  title="Dessert" />
-                    <CravingViewItem imgUri={require("../../assets/arrow.png")}  title="Chinese" />
-                    <CravingViewItem imgUri={require("../../assets/arrow.png")}  title="Steak" />
-                    <CravingViewItem imgUri={require("../../assets/arrow.png")}  title="Breakfast" />
+                    <CravingViewItem imgUri={require("../../assets/1.png")} title="Japanese" />
+                    <CravingViewItem imgUri={require("../../assets/2.png")} title="Dessert" />
+                    <CravingViewItem imgUri={require("../../assets/3.png")} title="Chinese" />
+                    <CravingViewItem imgUri={require("../../assets/4.png")} title="Steak" />
+                    <CravingViewItem imgUri={require("../../assets/5.png")} title="Breakfast" />
                 </ScrollView>
 
             </View>

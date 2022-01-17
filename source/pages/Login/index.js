@@ -70,7 +70,7 @@ export default class Login extends Component {
                         <TextFieldA value={this.state.email} onChangeTextA={(val) => this.inputValueUpdate(val, 'email')} textplaceholder="Email" />
                         <TextFieldA value={this.state.password} onChangeTextA={(val) => this.inputValueUpdate(val, 'password')} textplaceholder="Password" secureText={true} />
                         <View style={{ marginTop: 30 }}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate("ForgetPassword")}>
                                 <Text style={{ fontSize: 16, color: "#D86B22" }}>Forget password?</Text>
                             </TouchableOpacity>
                         </View>
@@ -78,7 +78,7 @@ export default class Login extends Component {
 
 
                     <View>
-                        <ButtonLong title="Sign in" onPress={() => this.Login()} />
+                        <ButtonLong title="Sign in" onPress={() => this.props.navigation.navigate("Home")} />
                         <View style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", marginTop: 10 }}>
                             <Text style={{ fontSize: 16 }}>Don't have account? </Text>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
